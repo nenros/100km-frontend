@@ -4,6 +4,3 @@ module.exports = class View extends Chaplin.View
   # Precompiled templates function initializer.
   getTemplateFunction: ->
     @template
-    
-  isLogged: ->
-    console.log('88888')
