@@ -1,57 +1,95 @@
 <h2>Rejestracja</h2>
-<form role="form">
-
+<form class="form-horizontal" role="form" id="form">
+<div id="error"></div>
     <h3>Użytkownik</h3>
 
-    <div class="form-group">
-        <label for="first_name">Imie</label>
-        <input type="text" class="form-control" id="first_name" placeholder="Wpisz imię">
+    <div class="form-group col-lg-6">
+        <label class="col-lg-2 control-label" for="first_name">Imię</label>
+        <div class="col-lg-10">
+        <input class="form-control" type="text" class="form-control" name="user[first_name]" id="first_name" placeholder="Wpisz imię">
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="last_name">Nazwisko</label>
-        <input type="text" class="form-control" id="last_name" placeholder="Wpisz nazwisko">
+    <div class="form-group col-lg-6">
+        <label class="col-lg-2 control-label" for="last_name">Nazwisko</label>
+        <div class="col-lg-10">
+        <input type="text" class="form-control" name="user[last_name]" id="last_name" placeholder="Wpisz nazwisko">
+        </div>
+    </div>
+    
+    <div class="form-group col-lg-6">
+        <label class="col-lg-2 control-label" for="password">Hasło</label>
+        <div class="col-lg-10">
+        <input  type="password" class="form-control" name="user[password]" id="password" placeholder="Hasło">
+        </div>
+    </div>
+    
+    <div class="form-group col-lg-6">
+        <label class="col-lg-2 control-label" for="password_confirmation">Potwierdź hasło</label>
+        <div class="col-lg-10">
+        <input  type="password" class="form-control" name="user[password_confirmation]" id="password_confirmation" placeholder="Potwierdź hasło">
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="last_name">E-mail</label>
-        <input type="email" class="form-control" id="email" placeholder="Wpisz e-mail">
+    <div class="form-group col-lg-6">
+        <label class="col-lg-2 control-label" for="last_name">E-mail</label>
+        <div class="col-lg-10">
+        <input  type="email" class="form-control" name="user[email]" id="email" placeholder="Wpisz e-mail">
+        </div>
     </div>
 
-    <div class="form-group">
-        <label for="phone_number">Numer telefonu</label>
-        <input type="tel" class="form-control" id="phone_number" placeholder="Wpisz numer telefonu">
+    <div class="form-group col-lg-6">
+        <label class="col-lg-3 control-label" for="phone_number">Numer telefonu</label>
+        <div class="col-lg-9">
+        <input type="tel" class="form-control" name="user[phone_number]"id="phone_number" placeholder="Wpisz numer telefonu">
+        </div>
     </div>
 
     <h3>Drużyna</h3>
 
     <div class="form-group">
-        <label for="unit_name">Nazwa</label>
-        <input type="text" class="form-control" id="unit_name" placeholder="Wpisz nazwę drużynę">
+        <label for="name">Nazwa</label>
+        <input type="text" class="form-control" name="unit[name]" id="name" placeholder="Wpisz nazwę drużynę">
+    </div>
+    <div class="form-group">
+        <label for="shortname">Skrót drużyny</label>
+        <input type="text" class="form-control" name="unit[shortname]" id="shortname" placeholder="Skrót jaki będzie prowadził do strony drużyny">
     </div>
 
     <div class="form-group">
         <label for="scouts_number">Ilość harcerzy</label>
-        <input type="number" class="form-control" id="scouts_number" placeholder="Wpisz nazwę drużynę">
+        <input type="number" class="form-control" name="unit[scouts_number]" id="scouts_number" placeholder="Wpisz nazwę drużynę">
     </div>
     
     <div class="form-group">
-        <label for="unit_city">Miasto</label>
-        <input type="text" class="form-control" id="unit_city" placeholder="Wpisz nazwę miasta">
+        <label for="city">Miasto</label>
+        <input type="text" class="form-control" name="unit[city]" id="city" placeholder="Wpisz nazwę miasta">
     </div>
     
     <div class="form-group">
         <label for="unit_male">Płeć</label>
-        <select type="text" class="form-control" id="unit_male">
-          <option>Koedukacyjna</option>  
-          <option>Żeńska</option>
-          <option>Męska</option>
+        <select type="text" class="form-control" name="unit[male]" id="unit_male">
+          <option value="co">Koedukacyjna</option>  
+          <option value="girl">Żeńska</option>
+          <option value="boy">Męska</option>
         </select>
     </div>
+    
     <div class="form-group">
-    <label for="unit_districts">Hufiec</label>
-    <select id="unit_districts" class="form-control">
+        <label for="unit_type">Typ</label>
+        <select type="text" class="form-control" name="unit[age]" id="unit_type">
+          <option value="troop">Harcerska</option>
+          <option value="pack">Starszoharcerska</option> 
+          <option value="multi">Wielopoziomowa</option>
+        </select>
+    </div>
+    
+    <div class="form-group">
+    <label for="units_districts">Hufiec</label>
+    <select id="units_districts" name="district_id" class="form-control">
 
     </select>
     </div>
+    
+    <button type="button" class="btn btn-primary" id='register'>Zarejestruj się</button>
 </form>

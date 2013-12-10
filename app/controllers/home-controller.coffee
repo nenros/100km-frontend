@@ -1,6 +1,7 @@
 Controller = require 'controllers/base/controller'
 HomePageView = require 'views/home/home-page-view'
 RegisterView = require 'views/home/register-view'
+LoginView = require 'views/home/login-view'
 Collection = require 'models/base/collection'
 District = require 'models/District'
 MainPageInfo = require 'models/MainPageInfo'
@@ -28,6 +29,11 @@ module.exports = class HomeController extends Controller
     @districts.fetch().then =>
       @districtsList.render()
     @adjustTitle('Rejestracja')
+
+  login: ->
+    @view = new LoginView region: 'main'
+    @adjustTitle('Logowanie')
+
 
   
 
